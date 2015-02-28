@@ -1,5 +1,5 @@
-<p>To use:</p>
 <ul>
+	<li><strong>HELP</strong> - This help file: <a href="/?help">/?help</a></li>
 	<li><strong>LOG IN</strong> - <a href="/?username=admin&password=password">/?username=[some username]&password=[some password]</a></li>
 	<li><strong>LOG OUT</strong> - <a href="/?logout">/?logout</a></li>
 	<li><strong>GET</strong> - <a href="/?method=get">/?method=GET</a></li>
