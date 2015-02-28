@@ -1,17 +1,10 @@
 <?php
-if(isset($_REQUEST['help'])) { ?>
-<p>To use:</p>
-<ul>
-	<li><strong>LOG IN</strong> - <a href="/?username=admin&password=password">/?username=[some username]&password=[some password]</a></li>
-	<li><strong>LOG OUT</strong> - <a href="/?logout">/?logout</a></li>
-	<li><strong>GET</strong> - <a href="/?method=get">/?method=GET</a></li>
-	<li><strong>GET</strong> - <a href="/?method=get&key=key">/?method=GET&key=[some key]</a></li>
-	<li><strong>POST</strong> - <a href="/?method=post&key=key&value=value">/?method=POST&key=[some key]&value=[some value]</a></li>
-	<li><strong>DELETE</strong> - <a href="/?method=delete&key=key">/?method=DELETE&key=[some key]</a></li>
-<?php	die();
+if(isset($_REQUEST['help'])) {
+	include "help.php";
+	die();
 }
 if(!file_exists("data/auth.json")) {
-	file_put_contents("data/auth.json", json_encode(array(), JSON_FORCE_OBJECT));
+	file_put_contents("data/auth.json", json_encode(array("admin" => array("password" => "password", "access" => "data.json")), JSON_FORCE_OBJECT));
 }
 session_start();
 
